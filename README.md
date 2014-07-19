@@ -1,56 +1,17 @@
 ## Skraflhjálp (Scrabble Helper)
 
-Vefur sem hjálpar skröflurum að finna orð í rekkanum og tengja þau við stafi sem fyrir eru.
+A node.js fork/rewrite of an [Icelandic Scrabble Helper](https://github.com/vthorsteinsson/Skrafl) that uses combinations of alphabetical sorted letters instead of permutations to find all possible word combinations for a set of letters. 
 
-Vefurinn er byggður á Python 2.7 og notar [Flask](http://flask.pocoo.org/)
-undirforritasafnið, þar með talið [Jinja2](http://jinja.pocoo.org/) sniðmátakerfið (templates).
+* Install node.js
+* run `npm install` in the project directory to install express (if intention is to run as standalone server)
+* run `node index` to start the server
+* See the code in action at `http://localhost:5000`
 
-Hann notar [Bootstrap](http://getbootstrap.com/) CSS-safnið fyrir viðmót og þægilega aðlögun að
-mismunandi skjám, þ.e. síma, spjaldtölvu eða borðtölvu.
+The code also exports the lookup function for reuse.
 
-Vefinn má nálgast á [http://skraflhjalp.appspot.com](http://skraflhjalp.appspot.com)
+Speed benchmarks:
+* vegavinnu: 1ms
+* vegavinnuverka: 18ms
+* vegavinnuverkamanna: 480ms
+* vegavinnuverkamannaskúr: 9.7s
 
-## Notkun vefsins
-Ef farið er inn á vefslóðina / kemur upp aðalsíða Skraflhjálpar.
-Slóðin /help gefur hjálparsíðu.
-
-## Til að keyra á eigin tölvu
-1. Settu upp [Python 2.7](https://www.python.org/download/releases/2.7.8/).
-
-2. Sæktu þetta Git safn:
-
-   ```
-   git clone https://github.com/vthorsteinsson/skrafl.git
-   ```
-
-3. Sæktu undirforritasöfn inn á lib skráasafnið undir aðalmöppu Skraflhjálpar.
-   Google App Engine getur aðeins notað undirforritasöfn sem geymd eru beint undir
-   möppu viðkomandi verkefnis.
-
-   ```
-   cd skrafl
-   pip install -r requirements.txt -t lib
-   ```
-4. Keyra má vefþjón Skraflhjálpar beint frá skipanalínu.
-   Google App Engine:
-
-   ```
-   dev_appserver.py .
-   ```
-
-   Venjuleg Python 2.7 uppsetning:
-
-   ```
-   python skrafl.py
-   ```
-
-5. Nálgast má vefinn á vefrápara:
-
-   Í skýinu á appspot.com [http://skraflhjalp.appspot.com](http://skraflhjalp.appspot.com)
-
-   Á Google App Engine/Cloud SDK á eigin tölvu [http://localhost:8080](http://localhost:8080)
-   
-   Venjuleg Python 2.7 uppsetning með Flask/Werkzeug [http://localhost:5000](http://localhost:5000)
-
-## Höfundur
-Vilhjálmur Þorsteinsson

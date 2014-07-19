@@ -1,0 +1,15 @@
+{
+  "name": "Skrafl",
+  "version": "0.0.0",
+  "description": "Vefur sem hjálpar skröflurum að finna orð í rekkanum og tengja þau við stafi sem fyrir eru.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~3.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ziggy Jonsson <ziggy.jonsson.nyc@gmail.com> (https://github.com/zjonsson/)",
+  "license": "MIT"
+}
